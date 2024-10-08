@@ -1,0 +1,91 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #fff0f5; /* Color de fondo suave */
+    color: #4b0082; /* Color de texto oscuro */
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar el contenido horizontalmente */
+}
+
+h1 {
+    text-align: center;
+    color: #ff1493; /* Color del título */
+    font-size: 36px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-weight: bold;
+    position: relative;
+}
+
+h1::after {
+    content: "💕"; /* Corazones después del título */
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: heartBeat 1.5s infinite; /* Efecto de latido */
+}
+
+@keyframes heartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+ul {
+    list-style-type: none; /* Sin viñetas */
+    padding: 0;
+    max-width: 600px; /* Ancho máximo para la lista */
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+}
+
+li {
+    background: rgba(255, 255, 255, 0.9); /* Fondo blanco con un poco de transparencia */
+    margin: 15px 0; /* Margen entre razones */
+    padding: 20px; /* Relleno interno */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    position: relative; /* Para posicionar los corazones */
+    display: flex; /* Usar Flexbox para los elementos dentro del li */
+    align-items: center; /* Centrar verticalmente */
+    transition: transform 0.2s; /* Efecto de transición */
+}
+
+li:hover {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el ratón */
+}
+
+li::before {
+    content: "❤️"; /* Corazón antes de cada razón */
+    font-size: 30px;
+    margin-right: 10px; /* Espacio entre el corazón y el texto */
+    animation: pulse 1.5s infinite; /* Efecto de pulso */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 16px;
+    color: #ff69b4; /* Color del pie de página */
+}
